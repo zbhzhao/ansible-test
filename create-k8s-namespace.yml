@@ -1,8 +1,12 @@
 ---
+- name: Test Ansible
+  hosts: localhost
 
-- name: Create a k8s namespace
-  kubernetes.core.k8s:
-    name: test-ansible
-    api_version: v1
-    kind: Namespace
-    state: present
+  tasks:
+  - name: Create a k8s namespace
+    kubernetes.core.k8s:
+        name: test-ansible
+        api_version: v1
+        kind: Namespace
+        state: present
+      
